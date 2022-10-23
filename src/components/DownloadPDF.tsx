@@ -21,7 +21,7 @@ const Download: FC<Props> = ({ data }) => {
   }, [data])
 
   return (
-    <div className={'download-pdf ' + (!show ? 'loading' : '')} title="Save PDF">
+    <div className={'download-pdf ' + (!show ? 'loading' : '')} title="Save Invoice">
       {show && (
         <PDFDownloadLink
           document={<InvoicePage pdfMode={true} data={data} />}

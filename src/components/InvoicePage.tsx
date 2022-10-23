@@ -132,7 +132,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
   return (
     <Document pdfMode={pdfMode}>
       <Page className="invoice-wrapper" pdfMode={pdfMode}>
-        {!pdfMode && <Download data={invoice} />}
+
 
         <View className="flex mt-40" pdfMode={pdfMode}>
           <View className="w-55" pdfMode={pdfMode}>
@@ -141,6 +141,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
               value={invoice.clientName}
               onChange={(value) => handleChange('clientName', value)}
               pdfMode={pdfMode}
+
             />
           </View>
           <View className="w-45" pdfMode={pdfMode}>
@@ -341,7 +342,13 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                 </Text>
               </View>
             </View>
+
           </View>
+
+        </View>
+
+        <View className="flex mt-40" pdfMode={pdfMode}>
+          {!pdfMode && <Download data={invoice} />}
         </View>
 
       </Page>
