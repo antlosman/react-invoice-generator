@@ -133,7 +133,6 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
     <Document pdfMode={pdfMode}>
       <Page className="invoice-wrapper" pdfMode={pdfMode}>
 
-
         <View className="flex mt-40" pdfMode={pdfMode}>
           <View className="w-55" pdfMode={pdfMode}>
             <EditableInput
@@ -141,9 +140,9 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
               value={invoice.clientName}
               onChange={(value) => handleChange('clientName', value)}
               pdfMode={pdfMode}
-
             />
           </View>
+
           <View className="w-45" pdfMode={pdfMode}>
 
             <View className="flex mb-5" pdfMode={pdfMode}>
@@ -193,6 +192,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
               </View>
             </View>
           </View>
+
         </View>
 
         <View className="mt-30 bg-dark flex" pdfMode={pdfMode}>
@@ -239,7 +239,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                 <EditableTextarea
                   className="dark"
                   rows={2}
-                  placeholder="Enter item name/description"
+                  placeholder="Item name/description - max 32 letters"
                   value={productLine.description}
                   onChange={(value) => handleProductLineChange(i, 'description', value)}
                   pdfMode={pdfMode}

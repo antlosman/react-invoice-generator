@@ -10,7 +10,12 @@ interface Props {
   pdfMode?: boolean
 }
 
-const EditableInput: FC<Props> = ({ className, placeholder, value, onChange, pdfMode }) => {
+const EditableInput: FC<Props> = ({
+                                    className,
+                                    placeholder,
+                                    value,
+                                    onChange,
+                                    pdfMode }) => {
   return (
     <>
       {pdfMode ? (

@@ -8,17 +8,7 @@ export const initialProductLine: ProductLine = {
 
 export const initialInvoice: Invoice = {
 
-  title: 'INVOICE',
-  companyName: '',
-  name: '',
-  companyAddress: '',
-  companyAddress2: '',
-  companyCountry: 'United States',
-  billTo: 'Bill To:',
   clientName: '',
-  clientAddress: '',
-  clientAddress2: '',
-  clientCountry: 'United States',
   invoiceTitleLabel: 'Invoice#',
   invoiceTitle: '',
   invoiceDateLabel: 'Invoice Date',
@@ -31,19 +21,15 @@ export const initialInvoice: Invoice = {
   productLineQuantityAmount: 'Amount',
   productLines: [
     {
-      description: 'Brochure Design',
-      quantity: '2',
-      rate: '100.00',
+      description: '',
+      quantity: '1',
+      rate: '0.00',
     },
     { ...initialProductLine },
     { ...initialProductLine },
   ],
   subTotalLabel: 'Sub Total',
-  taxLabel: 'Sale Tax (10%)',
+  taxLabel: 'Sale Tax (20%)',
   totalLabel: 'TOTAL',
   currency: '$',
-  notesLabel: 'Notes',
-  notes: 'It was great doing business with you.',
-  termLabel: 'Terms & Conditions',
-  term: 'Please make the payment by the due date.',
 }
