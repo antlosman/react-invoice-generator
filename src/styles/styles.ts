@@ -136,9 +136,6 @@ const styles: CSSClasses = {
     padding: '4px 12px 4px 0',
   },
 
-  logo: {
-    display: 'block',
-  }
 }
 
 export default styles

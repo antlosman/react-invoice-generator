@@ -49,11 +49,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
     if (name !== 'productLines') {
       const newInvoice = { ...invoice }
 
-      if (name === 'logoWidth' && typeof value === 'number') {
-        newInvoice[name] = value
-      } else if (name !== 'logoWidth' && typeof value === 'string') {
-        newInvoice[name] = value
-      }
+      newInvoice[name] = String(value)
 
       setInvoice(newInvoice)
     }
@@ -143,15 +139,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
 
         <View className="flex" pdfMode={pdfMode}>
           <View className="w-50" pdfMode={pdfMode}>
-            <EditableFileImage
-              className="logo"
-              placeholder="Your Logo"
-              value={invoice.logo}
-              width={invoice.logoWidth}
-              pdfMode={pdfMode}
-              onChangeImage={(value) => handleChange('logo', value)}
-              onChangeWidth={(value) => handleChange('logoWidth', value)}
-            />
+
             <EditableInput
               className="fs-20 bold"
               placeholder="Your Company"
