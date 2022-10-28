@@ -8,6 +8,7 @@ interface Props {
   value?: string
   onChange?: (value: string) => void
   pdfMode?: boolean
+  maxLengthForNumbers?: number
 }
 
 const EditableInput: FC<Props> = ({
@@ -15,7 +16,8 @@ const EditableInput: FC<Props> = ({
                                     placeholder,
                                     value,
                                     onChange,
-                                    pdfMode }) => {
+                                    pdfMode,
+                                    maxLengthForNumbers}) => {
   return (
     <>
       {pdfMode ? (
@@ -23,6 +25,7 @@ const EditableInput: FC<Props> = ({
       ) : (
         <input
           type="text"
+          maxLength={maxLengthForNumbers || 100}
           className={'input ' + (className ? className : '')}
           placeholder={placeholder || ''}
           value={value || ''}

@@ -3,15 +3,13 @@ import { CSSProperties } from 'react'
 export interface ProductLine {
   description: string
   quantity: string
-  rate: string
+  price: string
 }
 
 export interface Invoice {
 
   clientName: string
 
-  invoiceTitleLabel: string
-  invoiceTitle: string
   invoiceDateLabel: string
   invoiceDate: string
   invoiceDueDateLabel: string
